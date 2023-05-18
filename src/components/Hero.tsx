@@ -10,7 +10,7 @@ const Hero = ({ title = "Avengers Endgame", score = 10 }) => {
   };
 
   return (
-    <header className="relative min-h-screen">
+    <header className="relative box-border">
       <img
         className="object-cover object-center h-full w-full"
         src={placeholder}
@@ -23,13 +23,13 @@ const Hero = ({ title = "Avengers Endgame", score = 10 }) => {
         <p className="text-base">
           Nota{" "}
           <span
-            className={`inline-block mx-2 py-3 border-4 bg-black bg-opacity-75 rounded-full ${getBorderColor()}`}
+            className={`inline-block mt-5 mx-2 py-2 px-3 border-4 bg-black bg-opacity-75 rounded-full ${getBorderColor()}`}
           >
-            {score}
+          {score}
           </span>
         </p>
 
-        <button className="text-base py-2 px-8 mr-2 mt-8 rounded bg-black bg-opacity-50 transition-all duration-300 ease-in-out hover:bg-white hover:bg-opacity-75 hover:text-black">
+        <button className="text-base py-2 px-8 mr-2 mt-5 rounded bg-black bg-opacity-50 transition-all duration-300 ease-in-out hover:bg-white hover:bg-opacity-75 hover:text-black">
           <FontAwesomeIcon className="mr-2" icon={faPlay} />
           Assistir
         </button>
