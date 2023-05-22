@@ -3,6 +3,7 @@ import Slider, { Settings } from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Poster from './Poster';
+import './Carousel.css';
 
 
 interface Direction {
@@ -34,11 +35,11 @@ const Carousel = ({ title, data }: CarouselProps ) => {
 
 
     return (
-        <section>
-            <h2 className='relative z-10 font-bold text-2x1 ml-8 mb-4'>{title}</h2>
+        <section className='carousel'>
+            <h2 className='relative z-10 font-bold text-2x1 ml-8'>{title}</h2>
            
             <Slider className='relative mb-8' {...settings}>
-                {data?.map((movie, index) => <Poster movie={movie} index={index} />)}
+                {data?.map((movie, index) => <Poster title={movie.title} cover={movie.cover} key={index} />)}
             </Slider>
         </section>
     )
