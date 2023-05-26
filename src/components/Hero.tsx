@@ -2,14 +2,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPlus } from "@fortawesome/free-solid-svg-icons";
 import placeholder from "../assets/hero.jpg";
 import Score from './Score';
+import CONST from '../data/constants';
 
-const Hero = ({ title = "Avengers Endgame", score = 10 }) => {
+interface heroProps {
+  title: string;
+  score: number;
+  image: string;
+}
+
+const Hero = ({ title, score, image }: heroProps) => {
+  const { IMAGE_URL } = CONST;
+
   return (
     <header className="relative box-border -mb-32">
       <img
         className="object-cover object-center h-full w-full"
-        src={placeholder}
-        alt="Filme em destaque"
+        src={image ? `${IMAGE_URL}/original/${image}`: placeholder}
+        alt={title}
       />
       <div className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-transparent to-black"></div>
       <article className="absolute bottom-0 mb-64 px-8">

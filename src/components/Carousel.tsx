@@ -14,7 +14,7 @@ const StickArrow = ({ directionType }: Direction, onClick?: () => void) => (
     <button type='button' className={`absolute w-16 h-full z-10 bg-black bg-opacity-50 top-0 ${
      directionType === 'rigth' ? 'right-0' : 'left-0'
     }`}>
-        <FontAwesomeIcon icon={directionType === 'rigth' ? faChevronRight : faChevronLeft} size='3x' color='#fff' />
+        <FontAwesomeIcon icon={directionType === 'rigth' ? faChevronRight : faChevronLeft} size='3x' color='#fff'/>
     </button>
 )
 
