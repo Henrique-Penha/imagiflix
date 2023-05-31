@@ -9,15 +9,15 @@ interface posterProps extends Movie {
     key: number
 }
 
-const Poster = ({ title, cover, key }: posterProps) => {
+const Poster = ({ title, name, cover, score, key }: posterProps) => {
     return (
         <article className="relative transition-all duration-500 ease-in-out transform hover:scale-110 hover:z-10" key={key}>
-            <img src={cover} alt={title} />
+            <img src={cover} alt={title ? title : name} />
 
             <div className="poster cursor-pointer absolute inset-0 w-full h-full px-3 py-8 grid place-items-center bg-black bg-opacity-75 transition-all duration-500 ease-in-out opacity-0">
                 <FontAwesomeIcon icon={faPlayCircle} size="5x" />
-                <h2 className="text-2xl">{title}</h2>
-                <Score value={2} />
+                <h2 className="text-2xl">{title ? title : name}</h2>
+                <Score value={score} />
             </div>
         </article>
     )
