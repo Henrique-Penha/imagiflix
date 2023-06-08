@@ -14,6 +14,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/fbemitter": "^2.0.32",
+    "fbemitter": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-slick": "^0.29.0",

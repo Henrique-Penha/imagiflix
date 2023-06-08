@@ -1,4 +1,5 @@
 export interface Movie {
+    id?: number | string;
     title: string;
     cover: string;
     score?: number;
