@@ -25,7 +25,7 @@ const Poster = ({ title, name, cover, score, id, key }: posterProps) => {
         onClick={handleClick}>
             <img src={cover} alt={title ? title : name} />
 
-            <div className="poster cursor-pointer absolute inset-0 w-full h-full px-3 py-8 grid place-items-center bg-black bg-opacity-75 transition-all duration-500 ease-in-out opacity-0">
+            <div className="poster cursor-pointer absolute inset-0 w-full h-full px-3 py-8 grid place-items-center text-center leading-6 bg-black bg-opacity-75 transition-all duration-500 ease-in-out opacity-0">
                 <FontAwesomeIcon icon={faPlayCircle} size="5x" />
                 <h2 className="text-2xl">{title ? title : name}</h2>
                 <Score value={score} />
